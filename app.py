@@ -16,6 +16,20 @@ app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
 connect_db(app)
 
+
+
+
+@app.route('/')
+def index_page():
+    """Return an HTML page. This page should be entirely static (the route should just render the template, without providing any information on cupcakes in the database). It should show simply have an empty list where cupcakes should appear and a form where new cupcakes can be added."""
+
+    return render_template('index.html')
+
+
+# **********
+# RESTFUL CUPCAKES JSON API
+# **********
+
 # GET /api/cupcakes
 # Get data about all cupcakes.
 
@@ -90,4 +104,3 @@ def delete_cupcake(id):
     db.session.commit()
 
     return jsonify(message="Deleted")
-
