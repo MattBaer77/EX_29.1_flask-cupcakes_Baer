@@ -10,8 +10,37 @@
 
 </ol>
 
-<form action="/api/cupcakes" method="POST">
+<h2>Enter a new cupcake:</h2>
+
+
+<form action="">
+
+    <div class="form-group">
+
+        <label for="flavor">Flavor:</label>
+        <input class="form-control" type="text" name="flavor" id="">
+
+        <label for="size">Size:</label>
+        <input class="form-control" type="text" name="size" id="">
+
+        <label for="rating">Rating</label>
+        <input class="form-control" type="number" name="rating" id="">
+
+        <label for="image">Image URL:</label>
+        <input class="form-control" type="text" name="image" id="">
+
+    </div>
+
+    <button class="btn btn-primary mt-3">Add New Cupcake!</button>
     
 </form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="static/app.js"></script>
 
 {% endblock %}
